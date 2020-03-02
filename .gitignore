@@ -1,0 +1,4 @@
+# Project exclude paths
+/crm-dao/target/
+/crm-rest/target/
+/crm-service/target/
