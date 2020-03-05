@@ -5,17 +5,16 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 @Data
 @Entity
-@Table(name = "task_durations")
+@Table(name = "tasktime")
 public class TaskDuration implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "pk_task_id")
+    @Column(name = "pk_tasktime_id")
     private int id;
 
     @Temporal(TemporalType.TIMESTAMP)
@@ -24,7 +23,7 @@ public class TaskDuration implements Serializable {
     private Date startTask;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "stop_task")
+    @Column(name = "finish_task")
     private Date stopTask;
 
     @ManyToOne(optional = false)

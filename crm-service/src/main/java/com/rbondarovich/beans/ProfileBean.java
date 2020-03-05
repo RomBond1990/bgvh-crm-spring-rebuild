@@ -3,6 +3,7 @@ package com.rbondarovich.beans;
 import lombok.Data;
 
 import java.util.List;
+import java.util.Set;
 
 @Data
 @SuppressWarnings("unused")

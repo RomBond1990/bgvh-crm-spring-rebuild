@@ -2,7 +2,6 @@ package com.rbondarovich.controllers;
 
 import com.rbondarovich.ProfileService;
 import com.rbondarovich.beans.ProfileBean;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -50,10 +49,9 @@ public class ProfileApi  {
     }
 
     @PutMapping("{profileId}")
-    public ResponseEntity<Void> updateProfile (@PathVariable("profileId") ProfileBean profileBeanFromDB, @RequestBody ProfileBean profileBean) {
+    public ResponseEntity<Void> updateProfile (@PathVariable("profileId") @RequestBody ProfileBean profileBean) {
 
-        BeanUtils.copyProperties(profileBean, profileBeanFromDB);
-        profileService.saveProfile(profileBeanFromDB);
+        profileService.saveProfile(profileBean);
 
         return new ResponseEntity<>(HttpStatus.OK);
     }

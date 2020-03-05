@@ -2,7 +2,7 @@ package com.rbondarovich.beans;
 
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -13,9 +13,9 @@ public class ProjectBean {
 
     private String projectName;
 
-    private LocalDateTime dateOfCreation;
+    private Date dateOfCreation;
 
-    private LocalDateTime dateOfEnd;
+    private Date dateOfEnd;
 
     private GroupBean group;
 
@@ -23,7 +23,7 @@ public class ProjectBean {
 
     private TaskProjectStateBean status;
 
-    private List<ProfileBean> developers;
+//    private List<ProfileBean> developers;
 
     private List<TaskBean> tasks;
 

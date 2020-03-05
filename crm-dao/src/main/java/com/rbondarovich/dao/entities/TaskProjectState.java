@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @Data
 @Entity
-@Table(name="task_project_states")
+@Table(name="task_project_statuses")
 public class TaskProjectState implements Serializable {
 
     @Id

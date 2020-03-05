@@ -2,7 +2,7 @@ package com.rbondarovich.beans;
 
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -16,9 +16,9 @@ public class TaskBean {
 
     private int priority;
 
-    private LocalDateTime dateOfCreation;
+    private Date dateOfCreation;
 
-    private LocalDateTime dateOfEnd;
+    private Date dateOfEnd;
 
     private ProjectBean project;
 

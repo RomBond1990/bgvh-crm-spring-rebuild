@@ -2,7 +2,7 @@ package com.rbondarovich.beans;
 
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Data
 @SuppressWarnings("unused")
@@ -10,9 +10,9 @@ public class TaskDurationBean {
 
     private int id;
 
-    private LocalDateTime startTask;
+    private Date startTask;
 
-    private LocalDateTime stopTask;
+    private Date stopTask;
 
     private TaskBean task;
 
