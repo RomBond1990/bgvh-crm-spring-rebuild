@@ -50,6 +50,14 @@ public class TaskApi {
         return response;
     }
 
+    @GetMapping("{taskParentId}/subtasks")
+    public ResponseEntity<Iterable<TaskBean>> getAllSubtasks(@PathVariable("taskParentId") Integer taskParentId) {
+        Iterable<TaskBean> subtasks = taskService.getAllTasksByTaskParent(taskParentId);
+        ResponseEntity<Iterable<TaskBean>> response = new ResponseEntity<>(subtasks, HttpStatus.OK);
+
+        return response;
+    }
+
     @GetMapping("{taskId}")
     public ResponseEntity<TaskBean> getTaskById(@PathVariable("taskId") Integer taskId) {
         TaskBean taskBean = taskService.getTaskById(taskId);

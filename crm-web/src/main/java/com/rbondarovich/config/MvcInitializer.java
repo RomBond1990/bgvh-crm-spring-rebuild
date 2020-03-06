@@ -16,7 +16,6 @@ public class MvcInitializer implements WebApplicationInitializer {
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
 
-
 		ctx.register(ServiceConfiguration.class);
 		ctx.register(RestConfiguration.class);
 

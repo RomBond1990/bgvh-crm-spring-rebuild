@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Set;
 
 @Repository
 @Transactional
@@ -16,5 +17,7 @@ public interface TaskDao extends JpaRepository<Task, Integer> {
     List<Task> findAllByProject (Project project);
 
     List<Task> findAllByProfile (Profile profile);
+
+    List<Task> findAllByTaskParent (Task taskParent);
 
 }

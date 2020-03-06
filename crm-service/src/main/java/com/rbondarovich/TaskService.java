@@ -10,6 +10,8 @@ public interface TaskService {
 
     Iterable<TaskBean> getAllTasksByProject(Integer projectId);
 
+    Iterable<TaskBean> getAllTasksByTaskParent(Integer taskParentId);
+
     TaskBean getTaskById(Integer taskId);
 
     void saveTask(TaskBean task);

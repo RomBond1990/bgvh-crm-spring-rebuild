@@ -64,6 +64,15 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
+    public Iterable<TaskBean> getAllTasksByTaskParent(Integer taskParentId) {
+        Task taskParent = taskDao.getOne(taskParentId);
+        List<Task> subTasks = taskDao.findAllByTaskParent(taskParent);
+        List<TaskBean> taskBeans = converter.convertToBeanList(subTasks, TaskBean.class);
+
+        return taskBeans;
+    }
+
+    @Override
     public TaskBean getTaskById(Integer taskId) {
         Task task = taskDao.getOne(taskId);
         TaskBean taskBean = converter.convertToBean(task, TaskBean.class);

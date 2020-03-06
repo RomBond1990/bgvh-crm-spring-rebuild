@@ -51,7 +51,7 @@ public class Project implements Serializable {
     @Getter @Setter
     private TaskProjectState status;
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "projects_to_profiles",
             joinColumns = @JoinColumn(name = "fk_project_id"),
             inverseJoinColumns = @JoinColumn(name = "fk_profile_id"))

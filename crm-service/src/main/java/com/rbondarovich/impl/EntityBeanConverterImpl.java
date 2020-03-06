@@ -42,17 +42,6 @@ public class EntityBeanConverterImpl implements EntityBeanConverter {
     }
 
     @Override
-    public <E, B> Set<B> convertToBeanSet(Iterable<E> entities, Class<B> beanClass) {
-        Set<B> beans = new HashSet<>();
-
-        for (E entity : entities) {
-            B bean = dozerMapper.map(entity, beanClass);
-            beans.add(bean);
-        }
-        return beans;
-    }
-
-    @Override
     public <E, B> E convertToEntity(B bean, Class<E> entityClass) {
         E entity = dozerMapper.map(bean, entityClass);
 

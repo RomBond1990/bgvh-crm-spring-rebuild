@@ -23,7 +23,7 @@ public class ProjectBean {
 
     private TaskProjectStateBean status;
 
-//    private List<ProfileBean> developers;
+    private List<ProfileBean> developers;
 
     private List<TaskBean> tasks;
 
