@@ -186,3 +186,12 @@ INSERT INTO `tasks` (`task_name`, `priority`, `fk_project_id`, `fk_profile_id`, 
 INSERT INTO `tasks` (`task_name`, `priority`, `fk_project_id`, `fk_profile_id`, `fk_status_id`) VALUES ('Задача№1', '1', '2','1','1');
 INSERT INTO `tasks` (`task_name`, `priority`, `fk_project_id`, `fk_profile_id`, `fk_status_id`) VALUES ('Задача№2', '1', '2','1','1');
 INSERT INTO `tasks` (`task_name`, `priority`, `fk_project_id`, `fk_profile_id`, `fk_status_id`) VALUES ('Задача№1', '1', '3','3','1');
+
+
+INSERT INTO `tasks` (`task_name`, `priority`, `fk_project_id`, `fk_profile_id`, `fk_parent_task_id`, `fk_status_id`) VALUES ('Подзадача№1', '1', '1','1', '1','2');
+INSERT INTO `tasks` (`task_name`, `priority`, `fk_project_id`, `fk_profile_id`, `fk_parent_task_id`, `fk_status_id`) VALUES ('Подзадача№2', '1', '1','1', '1','2');
+INSERT INTO `tasks` (`task_name`, `priority`, `fk_project_id`, `fk_profile_id`, `fk_parent_task_id`, `fk_status_id`) VALUES ('Подзадача№3', '1', '1','1', '1','2');
+INSERT INTO `tasks` (`task_name`, `priority`, `fk_project_id`, `fk_profile_id`, `fk_parent_task_id`, `fk_status_id`) VALUES ('Подзадача№4', '1', '1','1', '1','2');
+
+
+
