@@ -1,10 +1,16 @@
 # bgvh-crm-spring-rebuild 
 Crm for Design Institute for building
+
 REST API
+
 Programming language: Java
+
 Frameworks: Spring, Spring Data, Hibernate
+
 Database: MySQL
+
 WebServer: Apache Tomcat
+
 
 Оптимизация работы и управление проектами в РУП «Белгипроводхоз»
 
